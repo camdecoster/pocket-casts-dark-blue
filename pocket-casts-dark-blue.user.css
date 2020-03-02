@@ -1,9 +1,13 @@
 /* ==UserStyle==
 @name           Pocket Casts Dark Blue
-@namespace      github.com/openstyles/stylus
-@version        2020.3.02-1
+@version        2020.3.2-2
 @description    An alternative dark theme for the Pocket Casts web player
 @author         camdecoster
+@namespace      github.com/openstyles/stylus
+@homepageURL    https://github.com/camdecoster/pocket-casts-dark-blue
+@supportURL     https://github.com/camdecoster/pocket-casts-dark-blue/issues
+@updateURL      https://raw.githubusercontent.com/camdecoster/pocket-casts-dark-blue/master/pocket-casts-dark-blue.user.css
+@license        CC-BY-NC-SA-4.0
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://play.pocketcasts.com/") {
