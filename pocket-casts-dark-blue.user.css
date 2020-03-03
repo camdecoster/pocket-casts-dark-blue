@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Pocket Casts Dark Blue
-@version        2020.3.3-2
+@version        2020.3.3-3
 @description    An alternative dark theme for the Pocket Casts web player
 @author         camdecoster
 @namespace      camdecoster.io
@@ -271,7 +271,15 @@
 
     .up-next-row:hover,
     .up-next-row.sorting {
-        background-color: var(--blue-dark);
+        background-color: var(--blue-medium);
+    }
+
+    .up-next .clear-up-next {
+        color: var(--orange-dark);
+    }
+
+    .up-next .clear-up-next:hover {
+        color: var(--orange-light);
     }
     /* Player controls END */
 
