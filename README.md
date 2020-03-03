@@ -3,6 +3,8 @@ This is a dark blue theme with orange accents for the Pocket Casts web player. I
 
 The theme is mostly just color replacements, but I changed a few items to make the theme consistent. Eventually, you'll be able to change the colors in the style settings.
 
+If you notice any problems, please [submit an issue report](https://github.com/camdecoster/pocket-casts-dark-blue/issues) or [submit a pull request](https://github.com/camdecoster/pocket-casts-dark-blue/pulls).
+
 ## Installation
 
 To use this style, install the [Stylus](https://add0n.com/stylus.html) extension and then click on the button below.
