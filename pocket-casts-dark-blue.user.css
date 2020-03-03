@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Pocket Casts Dark Blue
-@version        2020.3.2-2
+@version        2020.3.3-1
 @description    An alternative dark theme for the Pocket Casts web player
 @author         camdecoster
 @namespace      camdecoster.io
@@ -15,6 +15,7 @@
         --blue-dark: #040084;
         --blue-medium: #0141cf;
         --blue-light: #1874d2;
+        --blue-lighter: #5392d1;
         --orange-dark: #fd6600;
         --orange-medium: #fd7f00;
         --orange-light: #fecc98;
@@ -39,6 +40,14 @@
         background: var(--blue-dark);
         color: var(--light);
     }
+
+    /* a {
+        color: var(--blue-light) !important;
+    }
+
+    a:hover {
+        color: var(--blue-lighter) !important;
+    } */
 
     a[class^="FriendlyUrl__FriendlyLink"] {
         color: var(--orange-medium);
@@ -119,6 +128,43 @@
         div[class^="styled__IconSmallWrapper"][color="#3A3A3B"] {
         color: var(--orange-light);
     }
+
+    a[class^="styled__NavigationOptionLink"] {
+        color: var(--blue-medium);
+    }
+
+    a[class^="styled__NavigationOptionLink"] path {
+        color: var(--blue-medium);
+    }
+
+    div[class^="styled__NotchWrapper"] path {
+        fill: var(--blue-light);
+    }
+
+    /* styled__NotchWrapper */
+    a[class^="styled__NavigationOptionLink"]:hover {
+        color: var(--blue-light);
+    }    
+
+    a[class^="styled__NavigationOptionLink"]:hover path {
+        fill: var(--blue-light);
+    }
+
+    a[class^="styled__NavigationOptionLink"][color="#000000"] {
+        color: var(--orange-dark);
+    }
+
+    a[class^="styled__NavigationOptionLink"][color="#000000"]:hover {
+        color: var(--orange-light);
+    }
+
+    a[class^="styled__NavigationOptionLink"][color="#000000"] path {
+        fill: var(--orange-dark);
+    }
+
+    a[class^="styled__NavigationOptionLink"][color="#000000"]:hover path {
+        fill: var(--orange-light);
+    }
     /* Navigation Bar END */
 
     div[class^="styled__HeaderWrapper"] {
@@ -177,6 +223,11 @@
         background-color: var(--blue-medium);
     }
 
+    p[class*="styled__ProfileSubtitleText"],
+    p[class*="styled__FilesCountText"],
+    p[class*="styled__FilesFullText"] {
+        color: var(--light-accent);
+    }
     /* Drop down menu END */
 
     /* Options bar START */
@@ -371,7 +422,38 @@
     }
 
     .image-text-switch-option:hover {
-         background-color: var(--blue-medium);
+        background-color: var(--blue-medium);
     }
     /* Show archived episodes menu END */
+
+    /* Profile page START */
+    div[class^='styled__EmailBox'],
+    div[class^='styled__DetailsBox'] {
+        background-color: var(--blue-light);
+        border-color: var(--blue-medium);
+    }
+
+    div[class^="styled__PictureBox"] {
+        border: 1px solid var(--blue-medium);
+    }
+
+    div[class^="styled__CombinedSubscriptionWrapper"] p {
+        color: var(--light-accent);
+    }
+
+    div[class^="styled__FreeWrapper"] p {
+        color: var(--orange-dark);
+    }
+
+    div[class^="styled__SwitchWrapper"] .switch .line {
+        background-color: var(--orange-light);
+    }
+
+    div[class^="styled__SwitchWrapper"] .switch.on .line {
+        background-color: var(--orange-dark) !important;
+    }
+
+    div[class^="styled__Info"] p[class^="typography__H70"] {
+        color: var(--light-accent);
+    }
 }
