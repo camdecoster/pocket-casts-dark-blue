@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Pocket Casts Dark Blue
-@version        2020.3.3-3
+@version        2020.3.4-1
 @description    An alternative dark theme for the Pocket Casts web player
 @author         camdecoster
 @namespace      camdecoster.io
@@ -36,7 +36,8 @@
         --icon-profile: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='30' height='30' viewBox='0 0 30 30'><defs><rect id='profile-big-a' width='30' height='30' rx='15'/></defs><g fill='none' fill-rule='evenodd'><mask id='profile-big-b' fill='%23FD6600'><use xlink:href='%23profile-big-a'/></mask><rect width='28' height='28' x='1' y='1' stroke='%23FD6600' stroke-width='2' rx='14'/><circle cx='15' cy='12' r='5' stroke='%23FD6600' stroke-width='2' mask='url(%23profile-big-b)'/><ellipse cx='15' cy='25.5' stroke='%23FD6600' stroke-width='2' mask='url(%23profile-big-b)' rx='9' ry='8.5'/></g></svg>");
     }
 
-    .app {
+    .app,
+    .app.dark-theme {
         background: var(--blue-dark);
         color: var(--light);
     }
@@ -97,7 +98,8 @@
         color: var(--orange-light);
     }
 
-    .podcast-image .image .badge {
+    .podcast-image .image .badge,
+    .dark-theme .podcast-image .image .badge {
         background-image: var(--icon-badge);
     }
 
@@ -150,19 +152,23 @@
         fill: var(--blue-light);
     }
 
-    a[class^="styled__NavigationOptionLink"][color="#000000"] {
+    a[class^="styled__NavigationOptionLink"][color="#000000"],
+    a[class^="styled__NavigationOptionLink"][color="#FFFFFF"] {
         color: var(--orange-dark);
     }
 
-    a[class^="styled__NavigationOptionLink"][color="#000000"]:hover {
+    a[class^="styled__NavigationOptionLink"][color="#000000"]:hover,
+    a[class^="styled__NavigationOptionLink"][color="#FFFFFF"]:hover {
         color: var(--orange-light);
     }
 
-    a[class^="styled__NavigationOptionLink"][color="#000000"] path {
+    a[class^="styled__NavigationOptionLink"][color="#000000"] path,
+    a[class^="styled__NavigationOptionLink"][color="#FFFFFF"] path {
         fill: var(--orange-dark);
     }
 
-    a[class^="styled__NavigationOptionLink"][color="#000000"]:hover path {
+    a[class^="styled__NavigationOptionLink"][color="#000000"]:hover path,
+    a[class^="styled__NavigationOptionLink"][color="#FFFFFF"]:hover path {
         fill: var(--orange-light);
     }
     /* Navigation Bar END */
@@ -172,9 +178,11 @@
     }
 
     /* Search box START */
-    .search-widget input {
+    .search-widget input,
+    .dark-theme .search-widget input {
         background-color: var(--blue-light);
         border-color: var(--blue-medium);
+        color: var(--light);
     }
 
     .search-widget input::placeholder {
@@ -224,10 +232,11 @@
     }
 
     p[class*="styled__ProfileSubtitleText"],
+    div[class^="styled__ProfileChevronWrapper"],
     p[class*="styled__FilesCountText"],
     p[class*="styled__FilesFullText"] {
         color: var(--light-accent);
-    }
+    }    
     /* Drop down menu END */
 
     /* Options bar START */
@@ -261,16 +270,21 @@
     }
 
     .up-next h1,
-    .up-next-row .title {
+    .dark-theme .up-next h1,
+    .up-next-row .title,
+    .dark-theme .up-next-row .title {
         color: var(--light);
     }
 
-    .up-next-row .description {
+    .up-next-row .description,
+    .dark-theme .up-next-row .description {
         color: var(--light-accent);
     }
 
     .up-next-row:hover,
-    .up-next-row.sorting {
+    .dark-theme .up-next-row:hover,
+    .up-next-row.sorting,
+    .up-next-row.dark-theme.sorting {
         background-color: var(--blue-medium);
     }
 
@@ -284,16 +298,26 @@
     /* Player controls END */
 
     /* New Releases page START */
-    .episodes-table .row {
+    .episodes-table .row,
+    .dark-theme .episodes-table .row {
         border-bottom-color: var(--blue-medium);
     }
 
-    .episodes-table .row:hover .episode-table-cell .text .text-primary {
-        color: var(--blue-light) !important;
+    .episodes-table .row:hover .episode-table-cell .text .text-primary,
+    .dark-theme .episodes-table .row:hover .episode-table-cell .text .text-primary {
+        color: var(--blue-light);
     }
 
-    .episode-table-cell .text .text-primary {
+    .episode-table-cell .text .text-primary,
+    .dark-theme .episode-table-cell .text .text-primary {
         color: var(--light);
+    }
+
+    .episodes-table .row .published,
+    .dark-theme .episodes-table .row .published,
+    .episodes-table .row .duration,
+    .dark-theme .episodes-table .row .duration {
+        color: var(--light-accent);
     }
     /* New Releases page END */
 
@@ -316,32 +340,40 @@
     }
 
     .sub5cribe-button-large.sub5cribe,
-    .sub5cribe-button-large.sub5cribed {
+    .dark-theme .sub5cribe-button-large.sub5cribe,
+    .sub5cribe-button-large.sub5cribed,
+    .dark-theme .sub5cribe-button-large.sub5cribed {
         background-color: var(--blue-light);
         color: var(--light);
     }
 
-    .sub5cribe-button-large.sub5cribe:hover,
+    .sub5cribe-button-large.sub5cribe:hover,    
     .sub5cribe-button-large.unsub5cribe {
         background-color: var(--orange-medium);
         color: var(--light);
     }
 
     .page-podcast .podcast-information .podcast-details h2,
-    .page-podcast .podcast-information .podcast-details .next-episode-text {
+    .dark-theme .page-podcast .podcast-information .podcast-details h2,
+    .page-podcast .podcast-information .podcast-details .next-episode-text,
+    .dark-theme .page-podcast .podcast-information .podcast-details .next-episode-text {
         color: var(--blue-light);
     }
 
     .text-with-read-more,
-    .page-podcast .episode-summary {
+    .dark-theme .text-with-read-more,
+    .page-podcast .episode-summary,
+    .dark-theme .page-podcast .episode-summary {
         color: var(--light-accent);
     }
 
-    .separator {
+    .separator,
+    .dark-theme .separator {
         border-color: var(--blue-medium);
     }
 
-    .page-podcast .episode-rows .search-box input {
+    .page-podcast .episode-rows .search-box input,
+    .dark-theme .page-podcast .episode-rows .search-box input {
         background-color: var(--blue-dark);
         color: var(--light);
     }
@@ -429,7 +461,10 @@
         color: var(--light);
     }
 
-    .image-text-switch-option:hover {
+    .image-text-switch-option:hover,
+    .dark-theme .image-text-switch-option:hover,
+    .image-text-option:hover,
+    .dark-theme .image-text-option:hover {
         background-color: var(--blue-medium);
     }
     /* Show archived episodes menu END */
@@ -453,15 +488,40 @@
         color: var(--orange-dark);
     }
 
-    div[class^="styled__SwitchWrapper"] .switch .line {
+    /* div[class^="styled__SwitchWrapper"]  */
+    .switch .line,
+    .dark-theme .switch .line {
         background-color: var(--orange-light);
     }
 
-    div[class^="styled__SwitchWrapper"] .switch.on .line {
+    /* div[class^="styled__SwitchWrapper"]  */
+    .switch.on .line,
+    .dark-theme .switch.on .line {
         background-color: var(--orange-dark) !important;
     }
 
     div[class^="styled__Info"] p[class^="typography__H70"] {
         color: var(--light-accent);
+    }
+    /* Profile page END */
+    
+    /* Files page START */
+    div[class^="styled__EmptyStateBox"] {
+        background-color: var(--blue-light);
+        border-color: var(--blue-medium);
+    }
+
+    div[class^="styled__EmptyStateBox"]:hover {
+        background-color: var(--light);
+        color: var(--blue-dark);
+    }
+
+    div[class^="styled__EmptyStateWrapper"] p {
+        color: var(--light-accent);
+    }
+    /* Files page END */
+
+    div[class^="styled__EpisodeDialog"] {
+        background-color: var(--blue-light);
     }
 }
