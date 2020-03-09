@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Pocket Casts Dark Blue
-@version        2020.3.4-1
+@version        2020.3.9-1
 @description    An alternative dark theme for the Pocket Casts web player
 @author         camdecoster
 @namespace      camdecoster.io
@@ -24,6 +24,7 @@
         --red-light: #ff9995;
         --light: white;
         --light-accent: rgb(175, 175, 175);
+        --light-accent-2: rgb(125, 125, 125);
         --badge: var(--orange-dark);
         --icon-cancel-light-accent: url("data:image/svg+xml,<svg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><title>icon/cancelsearch copy</title><g transform='rotate(45 -.364 21.364)' fill='rgb(175, 175, 175)' fill-rule='evenodd'><rect x='5' width='2' height='12' rx='1'/><rect y='5' width='12' height='2' rx='1'/></g></svg>");
         --icon-back-arrow-blue-light: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3Eicon%2Farrow%3C%2Ftitle%3E%3Cdefs%3E%3Cpath%20d%3D%22M16.172%2011H4.592c-.555%200-1.006.444-1.006%201%200%20.552.45%201%201.007%201h11.579l-5.293%205.293c-.39.39-.39%201.024%200%201.414.39.39%201.023.39%201.414%200L20%2012l-7.707-7.707c-.39-.39-1.024-.39-1.414%200-.39.39-.39%201.024%200%201.414L16.172%2011z%22%20id%3D%22a%22%2F%3E%3C%2Fdefs%3E%3Cuse%20fill%3D%22%231874d2%22%20transform%3D%22matrix(-1%200%200%201%2023.586%200)%22%20xlink%3Ahref%3D%22%23a%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
@@ -74,7 +75,9 @@
     }
 
     .image-text-option .option-title,
-    .image-text-option .option-title-no-svg {
+    .dark-theme .image-text-option .option-title,
+    .image-text-option .option-title-no-svg,
+    .dark-theme .image-text-option .option-title-no-svg {
         color: var(--light);
     }
 
@@ -122,12 +125,15 @@
         color: var(--blue-light);
     }
 
-    div[class^="styled__IconSmallWrapper"][color="#3A3A3B"] {
+    div[class^="styled__IconSmallWrapper"][color="#3A3A3B"],
+    div[class^="styled__IconSmallWrapper"][color="#FFFFFF"] {
         color: var(--orange-dark);
     }
-
+    
     div[class^="styled__NavigationOptionSmallWrapper"]:hover
-        div[class^="styled__IconSmallWrapper"][color="#3A3A3B"] {
+        div[class^="styled__IconSmallWrapper"][color="#3A3A3B"],
+    div[class^="styled__NavigationOptionSmallWrapper"]:hover
+        div[class^="styled__IconSmallWrapper"][color="#FFFFFF"] {
         color: var(--orange-light);
     }
 
@@ -245,7 +251,7 @@
     }
 
     div[class^="styled__OptionWrapper"] path {
-        fill: var(--blue-light);
+        fill: var(--blue-lighter);
     }
 
     div[class^="styled__OptionWrapper"] #always-opacity-1 {
@@ -264,7 +270,8 @@
         border-top: 1px solid var(--blue-medium);
     }
 
-    .popup .popup-window {
+    .popup .popup-window,
+    .dark-theme .popup .popup-window {
         background-color: var(--blue-light);
         border: 1px solid var(--blue-medium);
     }
@@ -297,32 +304,7 @@
     }
     /* Player controls END */
 
-    /* New Releases page START */
-    .episodes-table .row,
-    .dark-theme .episodes-table .row {
-        border-bottom-color: var(--blue-medium);
-    }
-
-    .episodes-table .row:hover .episode-table-cell .text .text-primary,
-    .dark-theme .episodes-table .row:hover .episode-table-cell .text .text-primary {
-        color: var(--blue-light);
-    }
-
-    .episode-table-cell .text .text-primary,
-    .dark-theme .episode-table-cell .text .text-primary {
-        color: var(--light);
-    }
-
-    .episodes-table .row .published,
-    .dark-theme .episodes-table .row .published,
-    .episodes-table .row .duration,
-    .dark-theme .episodes-table .row .duration {
-        color: var(--light-accent);
-    }
-    /* New Releases page END */
-
     /* Podcast page START */
-    /* Need to fix issue with svg below */
     div[class^="styled__Arrow"] {
         background-image: var(--icon-back-arrow-blue-light);
     }
@@ -382,14 +364,86 @@
         color: var(--light-accent);
     }
 
-    .icon-cancel {
-        background-image: var(--icon-cancel-light-accent);
+    
+    /* Podcast page END */
+
+    /* Podcast settings page START */
+    div[class^="styled__SettingsEdit"] input {
+        background-color: var(--blue-light);
     }
 
-    .icon-date {
+    p[class*="styled__SettingsRowDescription"] {
+        color: var(--light-accent);
+    }
+    /* Podcast settings page END */
+
+    /* Episode elements START */
+    .episodes-table .row,
+    .dark-theme .episodes-table .row {
+        border-bottom-color: var(--blue-medium);
+    }
+
+    .episodes-table .row:hover .episode-table-cell .text .text-primary,
+    .dark-theme .episodes-table .row:hover .episode-table-cell .text .text-primary {
+        color: var(--orange-light) !important;
+    }
+
+    .episode-table-cell .text .text-primary,
+    .dark-theme .episode-table-cell .text .text-primary {
+        color: var(--light);
+    }
+
+    .episodes-table .row .published,
+    .dark-theme .episodes-table .row .published,
+    .episodes-table .row .duration,
+    .dark-theme .episodes-table .row .duration {
+        color: var(--light-accent);
+    }
+
+    .episode-table-cell .text .text-primary .episode-row .season-special {
+        color: var(--blue-light) !important;
+    }
+
+    .episode-table-cell .text .text-primary .episode-row .season,
+    .dark-theme .episode-table-cell .text .text-primary .episode-row .season {
+        color: var(--light-accent);
+    }
+
+    .row.played .episode-table-cell .text .text-primary,
+    .dark-theme .row.played .episode-table-cell .text .text-primary {
+        color: var(--light-accent);
+    }
+
+    .row.archived .episode-table-cell .text .text-primary,
+    .dark-theme .row.archived .episode-table-cell .text .text-primary,
+    .dark-theme .episodes-table .row .actions .actions-panel .archived-status {
+        color: var(--light-accent-2);
+    }
+    /* Episode elements END */
+
+    /* Episode pop-up START */
+    /* Need to update cancel icon */
+    /* .icon-cancel {
+        background-image: var(--icon-cancel-light-accent);
+    } */
+
+    div[class^="styled__PodcastLink"] {
+        color: var(--orange-medium);
+    }
+
+    div[class^="styled__PodcastLink"]:hover {
+        color: var(--orange-light);
+    }
+
+    .icon-date,
+    .dark-theme .icon-date {
         background-image: var(--icon-date);
     }
-    /* Podcast page END */
+
+    div[class^="styled__PopupMenuInfo"] span {
+        color: var(--light-accent);
+    }
+    /* Episode pop-up END */
 
     .menu-popup .popup-window > div.selected {
         color: var(--orange-medium);
@@ -524,4 +578,66 @@
     div[class^="styled__EpisodeDialog"] {
         background-color: var(--blue-light);
     }
+
+    /* Archive all dialog START */
+    .archive-all-popup .dialog,
+    .dark-theme .archive-all-popup .dialog {
+        background-color: var(--blue-dark);
+    }
+
+    .close-button,
+    .dark-theme .close-button {
+        /* NEED TO UPDATE BACKGROUND IMAGE HERE */
+    }
+
+    .archive-all-popup .dialog .dialog-content .icon-wrapper path {
+        fill: var(--blue-lighter);
+    }
+
+    .archive-all-popup .dialog .dialog-content h2,
+    .dark-theme .archive-all-popup .dialog .dialog-content h2 {
+        color: var(--light);
+    }
+
+    .archive-all-popup .dialog .dialog-content .body-text,
+    .dark-theme .archive-all-popup .dialog .dialog-content .body-text {
+        color: var(--light-accent);
+    }
+
+    button[kind="secondary"] {
+        background-color: var(--blue-light);
+        color: var(--light);
+        border-color: var(--blue-light);
+    }
+
+    button[kind="secondary"]:hover {
+        background-color: var(--blue-medium);
+        color: var(--light);
+        border-color: var(--blue-medium);
+    }
+
+    button[kind="secondary"]:active {
+        background-color: var(--blue-lighter);
+        color: var(--blue-dark);
+        border-color: var(--blue-lighter);
+    }
+
+    button[kind="primary"] {
+        background-color: var(--orange-medium);
+        color: var(--light);
+        border-color: var(--orange-medium);
+    }   
+
+    button[kind="primary"]:hover {
+        background-color: var(--orange-dark);
+        color: var(--light);
+        border-color: var(--orange-dark);
+    }
+
+    button[kind="primary"]:active {
+        background-color: var(--orange-light);
+        color: var(--orange-dark);
+        border-color: var(--orange-light);
+    }
+    /* Archive all dialog END */
 }
