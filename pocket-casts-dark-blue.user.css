@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Pocket Casts Dark Blue
-@version        2020.3.9-1
+@version        2020.3.23-1
 @description    An alternative dark theme for the Pocket Casts web player
 @author         camdecoster
 @namespace      camdecoster.io
@@ -482,6 +482,11 @@
     .discover-single .podcast-single-text .title,
     div[class^="styled__CollectionTitle"] {
         color: var(--light);
+    }
+
+    .podcast-list .discover-podcast,
+    .dark-theme .podcast-list .discover-podcast {
+        border-right-color: var(--blue-dark);
     }
 
     .podcast-list .discover-podcast {
