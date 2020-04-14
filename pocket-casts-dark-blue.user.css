@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Pocket Casts Dark Blue
-@version        2020.4.7-1
+@version        2020.4.14-1
 @description    An alternative dark theme for the Pocket Casts web player
 @author         camdecoster
 @namespace      camdecoster.io
@@ -101,9 +101,12 @@
         color: var(--orange-light);
     }
 
-    .podcast-image .image .badge,
-    .dark-theme .podcast-image .image .badge {
+    div[class^="styled__PodcastImageBadge"] {
         background-image: var(--icon-badge);
+    }
+
+    img[class^="styled__PodcastImg"] {
+        border: 1px solid var(--blue-light);
     }
 
     /* Navigation Bar START */
@@ -179,7 +182,7 @@
     }
     /* Navigation Bar END */
 
-    div[class^="styled__HeaderWrapper"] {
+    header[class^="styled__HeaderWrapper"] {
         border-bottom-color: var(--blue-medium);
     }
 
@@ -202,23 +205,29 @@
         border-color: var(--blue-medium);
     }
 
-    .search-widget .search-results {
+    .search-widget .search-results,
+    .dark-theme .search-widget .search-results {
+        background-color: var(--blue-light);
+        border-color: var(--blue-medium);
+    }
+
+    .search-widget .search-results .search-result,
+    .dark-theme .search-widget .search-results .search-result {
         background-color: var(--blue-light);
     }
 
-    .search-widget .search-results .search-result {
-        background-color: var(--blue-light);
-    }
-
-    .search-widget .search-results .search-result:hover {
+    .search-widget .search-results .search-result:hover,
+    .dark-theme .search-widget .search-results .search-result:hover {
         background-color: var(--blue-medium);
     }
 
-    .search-widget .search-results .search-result .podcast-title {
+    .search-widget .search-results .search-result .podcast-title,
+    .dark-theme .search-widget .search-results .search-result .podcast-title {
         color: var(--light);
     }
 
-    .search-widget .search-results .search-result .podcast-author {
+    .search-widget .search-results .search-result .podcast-author,
+    .dark-theme .search-widget .search-results .search-result .podcast-author {
         color: var(--light-accent);
     }
     /* Search box END */
@@ -246,15 +255,15 @@
     /* Drop down menu END */
 
     /* Options bar START */
-    div[class^="styled__OptionsHeaderWrapper"] {
+    section[class^="styled__OptionsHeaderWrapper"] {
         border-bottom-color: var(--blue-medium);
     }
 
-    div[class^="styled__OptionWrapper"] path {
+    button[class^="styled__OptionWrapper"] path {
         fill: var(--blue-lighter);
     }
 
-    div[class^="styled__OptionWrapper"] #always-opacity-1 {
+    button[class^="styled__OptionWrapper"] #always-opacity-1 {
         fill: var(--badge);
     }
     /* Options bar END */
@@ -380,6 +389,10 @@
     /* Episode elements START */
     .episodes-table .row,
     .dark-theme .episodes-table .row {
+        border-bottom-color: var(--blue-medium);
+    }
+
+    section[class^="styled__PodcastRowData"] {
         border-bottom-color: var(--blue-medium);
     }
 
