@@ -1,0 +1,243 @@
+/* ==UserStyle==
+@name           Pocket Casts Dark Blue
+@version        2020.9.10-1
+@description    An alternative dark theme for the Pocket Casts web player
+@author         camdecoster
+@namespace      camdecoster.io
+@homepageURL    https://github.com/camdecoster/pocket-casts-dark-blue
+@supportURL     https://github.com/camdecoster/pocket-casts-dark-blue/issues
+@updateURL      https://raw.githubusercontent.com/camdecoster/pocket-casts-dark-blue/master/pocket-casts-dark-blue.user.css
+@license        CC-BY-NC-SA-4.0
+==/UserStyle== */
+
+@-moz-document url-prefix("https://play.pocketcasts.com/")
+{
+    @import "./colors.less";
+
+    .app,
+    .app.dark-theme {
+        background: var(--blue-dark);
+        color: var(--light);
+    }
+
+    a[class^="FriendlyUrl__FriendlyLink"] {
+        color: var(--orange-medium);
+        &:hover {
+            color: var(--orange-light);
+        }
+    }
+
+    /* Replace profile icon. Is this necessary? */
+    /* 	div[class^="styled__ProfileIconWrapper"] img {
+		height: 0;
+		width: 0;
+		padding: 30px 0 0 30px;
+		background-image: var(--icon-profile);
+	} */
+
+    .episode-popup .dialog {
+        background-color: var(--blue-light);
+        .header .title .titleBox .episodeTitle {
+            color: var(--light);
+        }
+    }
+
+    .image-text-option {
+        .option-title,
+        .option-title .dark-theme,
+        .option-title-no-svg,
+        .dark-theme .option-title-no-svg {
+            color: var(--light);
+        }
+
+        &:hover {
+            background-color: var(--blue-medium);
+        }
+
+        .option-title-no-svg[style^="color"] {
+            color: var(--orange-medium) !important;
+        }
+    }
+
+    .show-notes {
+        color: var(--light-accent);
+
+        a {
+            color: var(--orange-medium);
+
+            &:hover {
+                color: var(--orange-light);
+            }
+        }
+    }
+
+    div[class^="styled__PodcastImageBadge"] {
+        background-image: var(--icon-badge);
+    }
+
+    img[class^="styled__PodcastImg"] {
+        border: 1px solid var(--blue-light);
+    }
+
+    @import "./navigation_bar.less";
+
+    header[class^="styled__HeaderWrapper"] {
+        border-bottom-color: var(--blue-medium);
+    }
+
+    @import "./search_box.less";
+
+    @import "./drop_down_menu.less";
+
+    @import "./options_bar.less";
+
+    .image-loaded.small-image {
+        border: 1px solid var(--blue-medium);
+    }
+
+    @import "./player_controls.less";
+
+    // @import "./new_releases.less";
+
+    @import "./podcast_page.less";
+
+    @import "./podcast_settings.less";
+
+    @import "./episode_elements.less";
+
+    @import "./episode_popup.less";
+
+    .menu-popup .popup-window > div.selected {
+        color: var(--orange-medium);
+    }
+
+    @import "./list_view.less";
+
+    @import "./discover_page.less";
+
+    /* Show archived episodes menu START */
+    .image-text-switch-option .option-title {
+        color: var(--light);
+    }
+
+    .image-text-switch-option:hover,
+    .dark-theme .image-text-switch-option:hover,
+    .image-text-option:hover,
+    .dark-theme .image-text-option:hover {
+        background-color: var(--blue-medium);
+    }
+    /* Show archived episodes menu END */
+
+    @import "./profile_page.less";
+
+    /* Files page START */
+    div[class^="styled__EmptyStateBox"] {
+        background-color: var(--blue-light);
+        border-color: var(--blue-medium);
+    }
+
+    div[class^="styled__EmptyStateBox"]:hover {
+        background-color: var(--light);
+        color: var(--blue-dark);
+    }
+
+    div[class^="styled__EmptyStateWrapper"] p {
+        color: var(--light-accent);
+    }
+    /* Files page END */
+
+    div[class^="styled__EpisodeDialog"] {
+        background-color: var(--blue-light);
+    }
+
+    /* Archive all dialog START */
+    .archive-all-popup .dialog,
+    .dark-theme .archive-all-popup .dialog {
+        background-color: var(--blue-dark);
+    }
+
+    .close-button,
+    .dark-theme .close-button {
+        /* NEED TO UPDATE BACKGROUND IMAGE HERE */
+    }
+
+    .archive-all-popup .dialog .dialog-content .icon-wrapper path {
+        fill: var(--blue-lighter);
+    }
+
+    .archive-all-popup .dialog .dialog-content h2,
+    .dark-theme .archive-all-popup .dialog .dialog-content h2 {
+        color: var(--light);
+    }
+
+    .archive-all-popup .dialog .dialog-content .body-text,
+    .dark-theme .archive-all-popup .dialog .dialog-content .body-text {
+        color: var(--light-accent);
+    }
+
+    button[kind="secondary"] {
+        background-color: var(--blue-light);
+        color: var(--light);
+        border-color: var(--blue-light);
+    }
+
+    button[kind="secondary"]:hover {
+        background-color: var(--blue-medium);
+        color: var(--light);
+        border-color: var(--blue-medium);
+    }
+
+    button[kind="secondary"]:active {
+        background-color: var(--blue-lighter);
+        color: var(--blue-dark);
+        border-color: var(--blue-lighter);
+    }
+
+    button[kind="primary"] {
+        background-color: var(--orange-medium);
+        color: var(--light);
+        border-color: var(--orange-medium);
+    }
+
+    button[kind="primary"]:hover {
+        background-color: var(--orange-dark);
+        color: var(--light);
+        border-color: var(--orange-dark);
+    }
+
+    button[kind="primary"]:active {
+        background-color: var(--orange-light);
+        color: var(--orange-dark);
+        border-color: var(--orange-light);
+    }
+    /* Archive all dialog END */
+
+    /* Upload dialog START */
+    div[class^="styled__UploadManagerWrapper"] {
+        border-color: var(--blue-medium);
+        background-color: var(--blue-light);
+    }
+
+    div[class^="styled__UploadManagerHeaderWrapper"] {
+        border-bottom-color: transparent;
+    }
+
+    div[class^="styled__StatusWrapper"] p[class^="typography__H70"] {
+        color: var(--light);
+    }
+
+    div[class^="styled__UploadingFileItemWrapper"] {
+        border-bottom-color: transparent;
+    }
+
+    div[class^="styled__UploadingFileItemWrapper"]:hover {
+        background-color: var(--blue-dark);
+    }
+    /* Upload dialog END */
+
+    .loader-square .spinners div,
+    .dark-theme .loader-square .spinners div,
+    .dark .loader-square .spinners div {
+        background-color: var(--orange-medium);
+    }
+}

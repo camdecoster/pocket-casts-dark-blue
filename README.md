@@ -1,5 +1,6 @@
 # Pocket Casts Dark Blue
-This is a dark blue theme with orange accents for the Pocket Casts web player. It's a work in progress, but most elements should be styled at this point. This style currently only works if the site theme is set to light.
+
+This is a dark blue theme with orange accents for the Pocket Casts web player. It's a work in progress, but most elements should be styled at this point. It's built using LESS and compiled to the single style listed below
 
 The theme is mostly just color replacements, but I changed a few items to make the theme consistent. Eventually, you'll be able to change the colors in the style settings.
 

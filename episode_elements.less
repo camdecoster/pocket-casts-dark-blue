@@ -1,0 +1,47 @@
+/* Episode elements START */
+.episodes-table .row,
+.dark-theme .episodes-table .row {
+    border-bottom-color: var(--blue-medium);
+}
+
+section[class^="styled__PodcastRowData"] {
+    border-bottom-color: var(--blue-medium);
+}
+
+.episodes-table .row:hover .episode-table-cell .text .text-primary,
+.dark-theme .episodes-table .row:hover .episode-table-cell .text .text-primary {
+    color: var(--orange-light) !important;
+}
+
+.episode-table-cell .text .text-primary,
+.dark-theme .episode-table-cell .text .text-primary {
+    color: var(--light);
+}
+
+.episodes-table .row .published,
+.dark-theme .episodes-table .row .published,
+.episodes-table .row .duration,
+.dark-theme .episodes-table .row .duration {
+    color: var(--light-accent);
+}
+
+.episode-table-cell .text .text-primary .episode-row .season-special {
+    color: var(--blue-light) !important;
+}
+
+.episode-table-cell .text .text-primary .episode-row .season,
+.dark-theme .episode-table-cell .text .text-primary .episode-row .season {
+    color: var(--light-accent);
+}
+
+.row.played .episode-table-cell .text .text-primary,
+.dark-theme .row.played .episode-table-cell .text .text-primary {
+    color: var(--light-accent);
+}
+
+.row.archived .episode-table-cell .text .text-primary,
+.dark-theme .row.archived .episode-table-cell .text .text-primary,
+.dark-theme .episodes-table .row .actions .actions-panel .archived-status {
+    color: var(--light-accent-2);
+}
+/* Episode elements END */

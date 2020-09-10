@@ -1,0 +1,74 @@
+@import "./colors.less";
+
+// START Navigation Bar
+a[class^="styled__RoundelLink"] img {
+    content: var(--logo);
+}
+
+nav[class*="styled__NavigationWrapper"] {
+    background: var(--blue-dark);
+    border-right-color: var(--blue-medium);
+}
+
+div[class^="styled__IconSmallWrapper"] {
+    color: var(--blue-medium);
+}
+
+div[class^="styled__NavigationOptionSmallWrapper"]:hover
+    div[class^="styled__IconSmallWrapper"] {
+    color: var(--blue-light);
+}
+
+div[class^="styled__IconSmallWrapper"][color="#3A3A3B"],
+div[class^="styled__IconSmallWrapper"][color="#FFFFFF"] {
+    color: var(--orange-dark);
+}
+
+div[class^="styled__NavigationOptionSmallWrapper"]:hover
+    div[class^="styled__IconSmallWrapper"][color="#3A3A3B"],
+div[class^="styled__NavigationOptionSmallWrapper"]:hover
+    div[class^="styled__IconSmallWrapper"][color="#FFFFFF"] {
+    color: var(--orange-light);
+}
+
+a[class^="styled__NavigationOptionLink"] {
+    color: var(--blue-medium);
+}
+
+a[class^="styled__NavigationOptionLink"] path {
+    color: var(--blue-medium);
+}
+
+div[class^="styled__NotchWrapper"] path {
+    fill: var(--blue-light);
+}
+
+/* styled__NotchWrapper */
+a[class^="styled__NavigationOptionLink"]:hover {
+    color: var(--blue-light);
+}
+
+a[class^="styled__NavigationOptionLink"]:hover path {
+    fill: var(--blue-light);
+}
+
+a[class^="styled__NavigationOptionLink"][color="#000000"],
+a[class^="styled__NavigationOptionLink"][color="#FFFFFF"] {
+    color: var(--orange-dark);
+}
+
+a[class^="styled__NavigationOptionLink"][color="#000000"]:hover,
+a[class^="styled__NavigationOptionLink"][color="#FFFFFF"]:hover {
+    color: var(--orange-light);
+}
+
+a[class^="styled__NavigationOptionLink"][color="#000000"] path,
+a[class^="styled__NavigationOptionLink"][color="#FFFFFF"] path {
+    fill: var(--orange-dark);
+}
+
+a[class^="styled__NavigationOptionLink"][color="#000000"]:hover path,
+a[class^="styled__NavigationOptionLink"][color="#FFFFFF"]:hover path {
+    fill: var(--orange-light);
+}
+// END Navigation Bar
